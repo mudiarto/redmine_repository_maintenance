@@ -1,14 +1,14 @@
 # Redmine sample plugin
 require 'redmine'
 
-RAILS_DEFAULT_LOGGER.info 'Starting Example plugin for RedMine'
+RAILS_DEFAULT_LOGGER.info 'Starting Repository Maintenance Plugin for RedMine'
 
-Redmine::Plugin.register :sample_plugin do
-  name 'Example plugin'
-  author 'Author name'
-  description 'This is a sample plugin for Redmine'
+Redmine::Plugin.register :repository_maintenance_plugin do
+  name 'Repository Maintenance plugin'
+  author 'Kusno Mudiarto'
+  description 'This is a plugin to maintain the repository'
   version '0.0.1'
-  settings :default => {'sample_setting' => 'value', 'foo'=>'bar'}, :partial => 'settings/settings'
+  settings :default => {'vcs' => 'value', 'foo'=>'bar'}, :partial => 'settings/settings'
 
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
